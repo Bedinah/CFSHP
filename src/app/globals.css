@@ -18,5 +18,5 @@ body {
 }
 h1 {
   color: var(--foreground);
-  @apply font-sans text-2xl font-bold; /* Tailwind handles font + size */
+  @apply font-sans text-2xl font-semibold; /* Tailwind handles font + size */
 }
