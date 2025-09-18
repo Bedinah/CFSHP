@@ -54,9 +54,10 @@ const coffeObj = [
   },
 ];
 
-const DrinksComponent = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const DrinksComponent = (props: any) => {
   return (
-    <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className={`grid ${props?.showPage ? 'grid-cols-4' : ' grid-cols-5'} rounded-xl gap-6`}>
       {coffeObj.map((item, idx) => (
         <CardsComponent
           key={item.name + idx}
@@ -64,7 +65,7 @@ const DrinksComponent = () => {
           image={item.image}
           description={item.description}
           price={item.price}
-          //   onChoose={() => console.log(`Chosen: ${item.name}`)}
+          onChoose={() =>  props?.onChoose(item)}
         />
       ))}
     </div>

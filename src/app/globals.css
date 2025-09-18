@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #171717;
+  --background: #f5f3ee;
   --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:#ffffff; ;
+    --background: #f5f3ee;
     --foreground: #0a0a0a;
   }
 }
@@ -19,11 +19,11 @@ body {
 h1 {
   color: var(--foreground);
   margin-bottom: 3rem;
-  @apply font-sans text-2xl font-semibold; /* Tailwind handles font + size */
+  font-size: 5rem @apply font-sans text-2xl font-semibold; /* Tailwind handles font + size */
 }
 .Button {
-  @apply bg-white text-amber-700 font-bold py-2 px-4 rounded w-full transition-colors duration-300 ;
+  @apply bg-[#6F4E37] text-white font-bold py-2 px-4 rounded-[12px]  w-full transition-colors duration-300;
 }
 .Button:hover {
-  @apply bg-amber-50;
+  @apply bg-[#5C4033];
 }

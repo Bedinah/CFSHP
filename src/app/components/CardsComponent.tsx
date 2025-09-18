@@ -17,21 +17,23 @@ const CardsComponent: React.FC<CoffeeCardProps> = ({
   onChoose,
 }) => {
   return (
-    <div className="relative p-6 min-w-[20em] max-w-[24em] rounded-2xl bg-[#ededed50] shadow-lg hover:scale-105 transition-transform flex flex-col items-center">
-      <p className="absolute right-4 top-4 text-xl font-semibold">
+    <div className="relative p-4 min-w-[16em] max-w-[22em] h-[25rem] rounded-2xl bg-white shadow-md flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl">
+      <p className="absolute right-4 top-4 text-2xl font-bold text-[#3E2723] p-1">
         RWF {price}
       </p>
-      <Image
-        className="w-68 transition-transform hover:scale-105"
-        src={image}
-        alt={name}
-      />
-      <p className="text-[#8F9931] text-2xl font-normal">
+      <div className=" w-40 h-40 flex items-center justify-center overflow-hidden rounded-full mt-10">
+        <Image
+          className="w-full h-full object-contain transition-transform hover:scale-105"
+          src={image}
+          alt={name}
+        />
+      </div>
+      <p className="text-[#3E2723] text-2xl font-normal mb-2">
         {name.toUpperCase()}
       </p>
-      <p className="text-lg font-light text-center">{description}</p>
-      <div className="w-[70%] mt-5">
-        <button className="Button" onClick={onChoose}>
+      <p className="text-lg font-light text-center opacity-80">{description}</p>
+      <div className="w-[50%] absolute bottom-6">
+        <button className="Button cursor-pointer" onClick={onChoose}>
           Choose
         </button>
       </div>
