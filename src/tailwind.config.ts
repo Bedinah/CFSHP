@@ -7,6 +7,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xl: "1820px",
+        "4xl": "2560px",
+      },
       fontFamily: {
         sans: [
           "Canva Sans",
