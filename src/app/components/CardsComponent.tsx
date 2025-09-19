@@ -19,7 +19,7 @@ const CardsComponent: React.FC<CoffeeCardProps> = ({
   return (
     <div className="relative p-4 min-w-[16em] max-w-[22em] h-[25rem] rounded-2xl bg-white shadow-md flex flex-col items-center transition-transform transform hover:scale-105 hover:shadow-xl">
       <p className="absolute right-4 top-4 text-2xl font-bold text-[#3E2723] p-1">
-        RWF {price}
+        RWF {price?.toLocaleString()}
       </p>
       <div className=" w-40 h-40 flex items-center justify-center overflow-hidden rounded-full mt-10">
         <Image
