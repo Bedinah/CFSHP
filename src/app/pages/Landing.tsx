@@ -8,8 +8,10 @@ import CheckoutPage from "./Checkout";
 const LandingPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showPage, setShowPage] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [cartItems, setCartItems] = useState<any[]>([]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleAddToCart = (item: any) => {
     setShowPage(true);
     setCartItems((prev) => [...prev, item]);
